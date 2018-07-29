@@ -1,0 +1,10 @@
+Assumptions/Design:
+It was requested the GET requests from the CLI application are in the form '/room/x/y'. I took the approach that the frontend doesn't need to store the current location.
+The CLI application and associated api calls were designed with the approach that the backend server is the information expert.
+Calls from the frontend send the minimal amount of data such that the backend can process requests.
+Application data such as the player score, lives remaining and current position is stored in the backend.
+
+Feedback:
+Took around 3-4hours of productive time, due to work and personal interruptions.
+Unusual that a code test involve two separate apps, but both use node, so very manageable in the end.
+It would have been really useful if a method of submission had have been specified.
