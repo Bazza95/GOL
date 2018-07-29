@@ -4,16 +4,18 @@ let server = require('./server.js');
 describe('loading express', function () {
     // Attempted to make the tests 'cleaner' by closing and starting a new connection each test
     // let server;
-    // beforeEach(function () {
-    //     server = require('./server.js');
-    // });
-    // afterEach(function (done) {
-    //     server.close(done);
-    // });
+    beforeEach(function () {
+        server = require('./server.js');
+    });
+    afterEach(function (done) {
+        server.close();
+        done();
+    });
     it('GET to /', function testRoot(done) {
         request(server)
             .get('/')
-            .expect(200, done);
+            .expect(200)
+            .end(done);
     });
     // Expect to get a 1 for x coordinate
     it('GET to /room', function testMain(done) {
@@ -31,6 +33,7 @@ describe('loading express', function () {
         console.log('test 404');
         request(server)
             .get('/fail/whale')
-            .expect(404, done);
+            .expect(404)
+            .end(done);
     });
 });

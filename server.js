@@ -56,4 +56,6 @@ let server = app.listen(8080, function() {
     console.log('Welcome to the game of life!');
 });
 
+if(!module.parent){ app.listen(port); }
+
 module.exports = server;
