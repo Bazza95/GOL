@@ -1,0 +1,23 @@
+{
+  "name": "gol",
+  "version": "1.0.0",
+  "description": "Game of Life CLI game.",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha tests.js",
+    "start": "node server.js"
+  },
+  "author": "jb",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.16.0",
+    "es6-promise": "^4.2.4",
+    "express": "^4.16.3",
+    "node-fetch": "^2.2.0",
+    "whatwg-fetch": "^2.0.4"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "supertest": "^3.1.0"
+  }
+}
